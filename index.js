@@ -41,7 +41,11 @@ controller.setupWebserver(process.env.PORT, function(err, webserver){
  });
 
  controller.hears('hi', 'direct_message', function(bot, message) {
-  bot.reply(message,"Hello.");
+  bot.reply(message,"Hello. How's your day");
+ });
+
+ controller.hears('안녕', 'direct_message', function(bot, message) {
+  bot.reply(message,"Hello. How's your day");
  });
 
  controller.on('slash_command', function(bot, message) {
